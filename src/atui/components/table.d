@@ -10,6 +10,8 @@ module atui.components.table;
 import std.array;
 import std.algorithm;
 import std.string;
+import std.conv;
+import std.range;
 import atui.api.input;
 
 /// Table column definition
@@ -171,7 +173,7 @@ public class Table {
         // Render separator
         string separator = "";
         foreach (col; columns) {
-            separator ~= repeat("─", col.width).array.to!string ~ " ";
+            separator ~= replicate("─", col.width) ~ " ";
         }
         output ~= separator ~ "\n";
 
@@ -187,7 +189,7 @@ public class Table {
                 if (j < rows[i].cells.length) {
                     line ~= padRight(rows[i].cells[j], col.width) ~ " ";
                 } else {
-                    line ~= repeat(" ", col.width + 1).array.to!string;
+                    line ~= replicate(" ", col.width + 1);
                 }
             }
 
@@ -238,6 +240,6 @@ public class Table {
         if (str.length >= width) {
             return str[0 .. width];
         }
-        return str ~ repeat(" ", width - str.length).array.to!string;
+        return str ~ replicate(" ", width - str.length);
     }
 }

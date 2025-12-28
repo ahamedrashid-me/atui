@@ -9,6 +9,7 @@ module atui.api.theming;
 
 import std.array;
 import std.string;
+import std.conv;
 
 /// Color definition
 public struct Color {
@@ -192,15 +193,15 @@ public class ThemeManager {
         
         Theme theme = themeMap[id];
         string output = "Theme: " ~ theme.name ~ " (" ~ theme.id ~ ")\n";
-        output ~= "Primary: RGB(" ~ theme.colors.primary.r.to!string ~ ","
-                ~ theme.colors.primary.g.to!string ~ ","
-                ~ theme.colors.primary.b.to!string ~ ")\n";
-        output ~= "Background: RGB(" ~ theme.colors.background.r.to!string ~ ","
-                ~ theme.colors.background.g.to!string ~ ","
-                ~ theme.colors.background.b.to!string ~ ")\n";
-        output ~= "Foreground: RGB(" ~ theme.colors.foreground.r.to!string ~ ","
-                ~ theme.colors.foreground.g.to!string ~ ","
-                ~ theme.colors.foreground.b.to!string ~ ")\n";
+        output ~= "Primary: RGB(" ~ to!string(theme.colors.primary.r) ~ ","
+                ~ to!string(theme.colors.primary.g) ~ ","
+                ~ to!string(theme.colors.primary.b) ~ ")\n";
+        output ~= "Background: RGB(" ~ to!string(theme.colors.background.r) ~ ","
+                ~ to!string(theme.colors.background.g) ~ ","
+                ~ to!string(theme.colors.background.b) ~ ")\n";
+        output ~= "Foreground: RGB(" ~ to!string(theme.colors.foreground.r) ~ ","
+                ~ to!string(theme.colors.foreground.g) ~ ","
+                ~ to!string(theme.colors.foreground.b) ~ ")\n";
         
         return output;
     }

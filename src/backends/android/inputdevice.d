@@ -7,7 +7,7 @@
 module atui.backends.android.inputdevice;
 
 import atui.pal.inputdevice : IInputDevice;
-import atui.api.input : InputEvent, InputEventType;
+import atui.api.input : InputEvent, InputEventType, SpecialKey;
 
 /// Android touch and key input handler
 public class AndroidInputDevice : IInputDevice {
@@ -39,9 +39,9 @@ public class AndroidInputDevice : IInputDevice {
     public void onTouchEvent(int action, float x, float y, int pointerId) {
         InputEvent event;
         event.type = cast(InputEventType)action;
-        event.touch.x = cast(uint)x;
-        event.touch.y = cast(uint)y;
-        event.touch.pointerId = pointerId;
+        event.touchData.x = cast(uint)x;
+        event.touchData.y = cast(uint)y;
+        event.touchData.pointerId = pointerId;
         eventQueue ~= event;
     }
 
@@ -49,12 +49,12 @@ public class AndroidInputDevice : IInputDevice {
     public void onKeyEvent(int keyCode, bool pressed) {
         InputEvent event;
         event.type = pressed ? InputEventType.KeyPress : InputEventType.KeyRelease;
-        event.key.specialKey = mapAndroidKeyCode(keyCode);
+        event.keyData.specialKey = cast(SpecialKey)mapAndroidKeyCode(keyCode);
         eventQueue ~= event;
     }
 
-    private int mapAndroidKeyCode(int code) {
+    private SpecialKey mapAndroidKeyCode(int code) {
         // TODO: Map Android key codes to SpecialKey enum
-        return 0;
+        return SpecialKey.None;
     }
 }
