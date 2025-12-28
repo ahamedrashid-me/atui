@@ -1,0 +1,34 @@
+# Build directories
+build/
+.dub/
+dub.selections.json
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# D language
+.d/
+*.depend
+
+# System
+__pycache__/
+*.pyc
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
+*.backup
+temp/

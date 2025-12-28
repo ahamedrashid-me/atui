@@ -1,0 +1,32 @@
+{
+  "name": "atui",
+  "description": "ATUI - Advanced Terminal User Interface Framework for D",
+  "authors": ["ATUI Development Team"],
+  "license": "MIT",
+  "copyright": "Copyright (c) 2025 ATUI Contributors",
+  "homepage": "https://github.com/ahamedrashid-me/atui",
+  "repository": {
+    "kind": "github",
+    "owner": "ahamedrashid-me",
+    "project": "atui"
+  },
+  "documentation": "https://github.com/ahamedrashid-me/atui",
+  "version": "0.1.0",
+  "targetType": "library",
+  "targetPath": "build",
+  "sourcePaths": ["src"],
+  "importPaths": ["src"],
+  "configurations": [
+    {
+      "name": "default",
+      "versions": ["Have_atui"],
+      "targetType": "library"
+    },
+    {
+      "name": "linux",
+      "platforms": ["linux"],
+      "versions": ["ATUI_LINUX", "ATUI_TERMINAL"],
+      "targetType": "library"
+    }
+  ]
+}
