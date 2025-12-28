@@ -11,7 +11,16 @@
 - [ ] Comprehensive documentation
 - [ ] Unit tests
 
-## Phase 2: Linux Implementation
+## Phase 2: v0.2.0 - Enhanced Input & Components (Q1 2025)
+- [x] Mouse support (click, drag, double-click)
+- [x] Tree component for hierarchical data
+- [x] Table component with sorting
+- [x] Theming system with color schemes
+- [x] Extended component library (16 components)
+- [ ] Mouse documentation
+- [ ] Tree & Table examples
+
+## Phase 3: Linux Implementation
 - [ ] Complete ANSI terminal renderer
 - [ ] Framebuffer renderer with font support
 - [ ] evdev input device implementation

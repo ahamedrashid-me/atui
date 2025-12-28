@@ -11,7 +11,7 @@
     "project": "atui"
   },
   "documentation": "https://github.com/ahamedrashid-me/atui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "targetType": "library",
   "targetPath": "build",
   "sourcePaths": ["src"],

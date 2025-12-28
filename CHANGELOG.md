@@ -5,6 +5,22 @@ All notable changes to ATUI will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - Q1 2025
+
+### Added
+- ✨ Mouse support with click and drag events
+- 🌳 Tree component for hierarchical data display
+- 📊 Table component with sorting and selection
+- 🎨 Theming system with customizable color schemes
+- 🖱️ Mouse event handling in event loop
+- 🗺️ Click, double-click, and drag detection
+- 🎭 Theme manager for dynamic theme switching
+
+### Improved
+- Enhanced input event processing
+- Better component interaction with mouse support
+- Extended component library (16 components total)
+
 ## [0.1.0] - 2025-12-29
 
 ### Added
