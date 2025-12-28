@@ -8,6 +8,7 @@
  * - Selection: Checkbox, RadioButton
  * - Editing: TextArea
  * - Status: StatusBar, ProgressBar
+ * - Advanced: Tree, Table
  */
 
 module atui.components;
@@ -26,3 +27,5 @@ public import atui.components.textarea;
 public import atui.components.combobox;
 public import atui.components.statusbar;
 public import atui.components.progressbar;
+public import atui.components.tree;
+public import atui.components.table;

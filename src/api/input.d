@@ -16,6 +16,10 @@ public enum InputEventType {
     TouchStart,
     TouchMove,
     TouchEnd,
+    MouseClick,
+    MouseDoubleClick,
+    MouseDrag,
+    MouseRelease,
     SystemEvent
 }
 
@@ -42,6 +46,7 @@ public struct InputEvent {
     InputEventType type;
     KeyEventData keyData;
     TouchEventData touchData;
+    MouseEventData mouseData;
     SystemEventData systemData;
 }
 
@@ -57,6 +62,15 @@ public struct TouchEventData {
     uint x;
     uint y;
     uint pointerId;
+}
+
+public struct MouseEventData {
+    uint x;
+    uint y;
+    ubyte button;  // 0=left, 1=middle, 2=right
+    bool shiftKey;
+    bool ctrlKey;
+    bool altKey;
 }
 
 public struct SystemEventData {
